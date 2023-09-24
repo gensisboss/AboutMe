@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AboutMe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;800;900&display=swap"
+        rel="stylesheet">
+
+    <script src="./assets/js/index.js"></script>
+    <link rel="stylesheet" href="./assets/css/index.css">
+</head>
+
+<body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark bg-opacity-75 sticky-md-top ">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./assets/images/header-logo.svg" alt="header"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav ms-md-auto">
+                    <li class="nav-item">
+                        <a class="nav-link menu-item active" id="homeBtn" aria-current="page" onClick="setActive('homeBtn')" href="#home">简介</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-item" id="learnBtn" onClick="setActive('learnBtn')" href="#learn">学习</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-item" id="skillBtn" onClick="setActive('skillBtn')" href="#skill">技能</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-item" id="productionBtn" onClick="setActive('productionBtn')" href="#production">作品</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link menu-item" id="experiencesBtn" onClick="setActive('experiencesBtn')" href="#experiences">经验</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link menu-item" id="contactBtn" onClick="setActive('contactBtn')" href="#contact">联系</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <!--navbar-->
+    <main data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example"
+        tabindex="0">
+        <!--hero section-->
+        <section class="py-lg-18 py-md-10  py-8 bg-dark" id="home">
+            <div class="container">
+                <!--row-->
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-5 col-md-6  col-lg-6 col-12">
+                        <div class="mb-5 mb-md-0">
+                            <!--text-->
+                            <span class=" text-primary">念念不忘，必有回响</span>
+                            <!--title-->
+                            <h1 class="mt-4 mb-4 display-3 fw-semibold">龚港浩</h1>
+                            <p class="mb-6 lead">东北石油大学-电子信息工程</p>
+                            <p>了解计算机网络、操作系统，有良好的数据库和算法基础;</p>
+                            <p>熟悉unity3d Laya Cocos游戏制作;</p>
+                            <p>熟练运用 C++,C#,JS,TS,Html,Python, NodeJs编程;</p>
+                            <p class="mb-6">CSDN发表超过130篇博客。</p>
+                            <a href="#contact" class="btn btn-primary" onClick="setActive('contactBtn')">联系我</a>
+                            <!--text-->
+                        </div>
+                    </div>
+                    <!--col-->
+                    <div class="col-xl-4 offset-xl-3 col-md-5 offset-md-1 col-lg-5 offset-lg-0  col-12">
+                        <!--image-->
+                        <div class="position-relative">
+                            <img src="./assets/images/img-1.jpg" alt="about"
+                                class="img-fluid position-relative z-1 rounded-4 ms-lg-n5 ms-md-n3">
+                            <div class="position-absolute top-0 mt-1 ">
+                                <img src="./assets/images/square.svg" alt="square"
+                                    class="img-fluid w-100 d-none d-lg-block d-md-block">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+        <!--hero section-->
+        <!--learn section-->
+        <section class="py-lg-18 py-md-10 py-8" id="learn">
+            <div class="container">
+                <!--row-->
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-4  col-md-6 col-lg-6 col-12">
+                        <div class="p-3 mb-5 mb-md-0">
+                            <div class="cloud"></div>
+                            <script>
+                                setInterval(() => {
+                                    rain();
+                                }, 50);
+                            </script>
+                        </div>
+                    </div>
+                    <!--col-->
+                    <div class="col-xl-6 offset-xl-1  col-md-5 offset-md-1 col-lg-5 offset-lg-1 col-12">
+                        <div class="">
+                            <!--text-->
+                            <!--title-->
+                            <h2 class="mb-5">
+                                My <span class="text-primary">Learn</span>
+                            </h2>
+                            <p>2017年 : 排名前10%，校综合奖学金“优胜奖”，校三等奖学金</p>
+                            <p>2018年 : 参与腾讯与中国传媒大学联合主办的中国高校计算机大赛获得三等奖。</p>
+                            <p>2019年 : 休学实习，学习游戏制作与发布流程。</p>
+                            <p class="mb-6">2021年 : 与多家公司签订游戏合同，以外包形式独立制作多款游戏。</p>
+                            <a href="#contact"  class="btn btn-primary" onClick="setActive('contactBtn')">联系我</a>
+                            <!--text-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--learn section-->
+        <!--skill section-->
+        <section class=" py-lg-18 py-md-10 py-8 bg-dark" id="skill">
+            <div class="container">
+                <!--row-->
+                <div class="row">
+                    <div class="col-xl-10 col-md-12  col-lg-6 col-12">
+                        <div class="mb-lg-8 mb-5">
+                            <!--text-->
+                            <!--title-->
+                            <h2 class="mb-4">My <span class="text-primary">Skill</span></h2>
+                            <p class="mb-0">我在前端和后端开发上都有丰富的经验,熟悉HTML, CSS, JavaScript,Vue等前端技术,<br>
+                                同时也精通Node.js和Express等后端技术。我对数据库操作和管理也非常了解,经常使用MySQL和MongoDB。<br>
+                                我熟悉使用Git进行版本控制,能够高效地在团队中协作。我一直致力于深化和广泛的技术学习</p>
+                            <!--text-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <!--service-->
+                    <div class="col-xl-4 col-md-6 col-lg-4  col-12">
+                        <!--card start-->
+                        <div class="card text-center border-0 mb-4  mb-lg-0">
+                            <!--card body-->
+                            <div class="card-body p-5">
+                                <div class="mb-5">
+                                    <!--icon-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                        fill=" var(--bs-primary)" class="bi bi-window-stack" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.5 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1ZM6 6a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z" />
+                                        <path
+                                            d="M12 1a2 2 0 0 1 2 2 2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2 2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h10ZM2 12V5a2 2 0 0 1 2-2h9a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1Zm1-4v5a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V8H3Zm12-1V5a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v2h12Z" />
+                                    </svg>
+
+                                </div>
+                                <div>
+                                    <!--title-->
+                                    <h3 class="mb-3">前端</h3>
+                                    <p class="mb-0 ">
+                                        拥有扎实的HTML，CSS和JavaScript基础，熟悉响应式设计和浏览器兼容性处理，掌握性能优化技巧，能使用React等前端框架，有良好的学习能力和团队协作精神。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--card end-->
+                    </div>
+                    <!--service-->
+                    <!--service-->
+                    <div class="col-xl-4 col-md-6 col-lg-4 col-12">
+                        <!--card start-->
+                        <div class="card text-center border-0 mb-4 mb-md-0">
+                            <!--card body-->
+                            <div class="card-body p-5">
+                                <div class="mb-5">
+                                    <!--icon-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                        fill=" var(--bs-primary)" class="bi bi-megaphone" viewBox="0 0 16 16">
+                                        <path
+                                            d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49a68.14 68.14 0 0 0-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 74.663 74.663 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199V2.5zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0zm-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233c.18.01.359.022.537.036 2.568.189 5.093.744 7.463 1.993V3.85zm-9 6.215v-4.13a95.09 95.09 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A60.49 60.49 0 0 1 4 10.065zm-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68.019 68.019 0 0 0-1.722-.082z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <!--title-->
+                                    <h3 class="mb-3">后端</h3>
+                                    <p class="mb-0">
+                                        使用Python与Digno框架，熟悉数据库技术如MySQL,了解服务器端技术如Node.js，熟悉构建和维护APIs，理解常见设计模式，具备良好的问题解决技巧和团队协作能力。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--card end-->
+                    </div>
+                    <!--service-->
+                    <div class="col-xl-4 col-md-6 col-lg-4 col-12">
+                        <!--card-->
+                        <div class="card text-center border-0">
+                            <!--card body-->
+                            <div class="card-body p-5">
+                                <div class="mb-5">
+                                    <!--icon-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                                        fill=" var(--bs-primary)" class="bi bi-bezier" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M0 10.5A1.5 1.5 0 0 1 1.5 9h1A1.5 1.5 0 0 1 4 10.5v1A1.5 1.5 0 0 1 2.5 13h-1A1.5 1.5 0 0 1 0 11.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zm10.5.5A1.5 1.5 0 0 1 13.5 9h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5v-1zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM6 4.5A1.5 1.5 0 0 1 7.5 3h1A1.5 1.5 0 0 1 10 4.5v1A1.5 1.5 0 0 1 8.5 7h-1A1.5 1.5 0 0 1 6 5.5v-1zM7.5 4a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1z" />
+                                        <path
+                                            d="M6 4.5H1.866a1 1 0 1 0 0 1h2.668A6.517 6.517 0 0 0 1.814 9H2.5c.123 0 .244.015.358.043a5.517 5.517 0 0 1 3.185-3.185A1.503 1.503 0 0 1 6 5.5v-1zm3.957 1.358A1.5 1.5 0 0 0 10 5.5v-1h4.134a1 1 0 1 1 0 1h-2.668a6.517 6.517 0 0 1 2.72 3.5H13.5c-.123 0-.243.015-.358.043a5.517 5.517 0 0 0-3.185-3.185z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <!--title-->
+                                    <h3 class="mb-3">算法</h3>
+
+                                    <p class="mb-0">
+                                        熟练掌握常用数据结构和算法，具备较强的逻辑思考和代码实现能力。具备深度学习、机器学习理论知识，有一定的数学基础。解决问题能力强，讲究团队协作 </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--card-->
+                    </div>
+                    <!--service-->
+                </div>
+            </div>
+        </section>
+        <!--skill section-->
+        <!--production section-->
+        <section class="py-lg-18 py-md-10 py-8" id="production">
+            <div class="container">
+                <!--row-->
+                <div class="row">
+                    <div class="col-xl-7 offset-xl-3 col-md-12  col-lg-8 offset-lg-2 col-12">
+                        <!--text-->
+                        <div class="text-center mb-5 mb-lg-8">
+                            <!--title-->
+                            <h2 class="mb-4">My <span class="text-primary">Production</span></h2>
+                            <p class="mb-0">《董贼哪里走》 《86上山了》 《撞车大对决》 《方块浪起来》 《动物军团》《王牌战场》<br>
+                                《点滴时光》 《1202》 《军团出击》 《僵尸生存日记》 《恐怖小镇躲猫猫》</p>
+                        </div>
+                        <!--text-->
+                    </div>
+                </div>
+                <div class="row">
+                    <!--col-->
+                    <div class="col-xl-6 col-md-6 col-12 my-5">
+                        <!--video-->
+                        <video class="mb-4 d-block rounded-3" width="100%" controls>
+                            <source src="./assets/video/momoyo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="col-xl-6 col-md-6 col-12">
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6 col-12">
+                                <!--image-->
+                                <a class="mb-4 d-block" href="#">
+                                    <img src="./assets/images/portfolio-1.jpg" alt="portfolio"
+                                        class="img-fluid w-100 rounded-3">
+                                </a>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-12">
+                                <!--image-->
+                                <a class="mb-4 d-block" href="#">
+                                    <img src="./assets/images/portfolio-2.jpg" alt="portfolio"
+                                        class="img-fluid w-100 rounded-3">
+                                </a>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-12">
+                                <!--image-->
+                                <a class="mb-4 d-block" href="#">
+                                    <img src="./assets/images/portfolio-3.jpg" alt="portfolio"
+                                        class="img-fluid w-100 rounded-3">
+                                </a>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-12">
+                                <!--image-->
+                                <a class="mb-4 d-block" href="#">
+                                    <img src="./assets/images/portfolio-4.jpg" alt="portfolio"
+                                        class="img-fluid w-100 rounded-3">
+                                </a>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-12">
+                                <!--image-->
+                                <a class="mb-4 d-block" href="#">
+                                    <img src="./assets/images/portfolio-5.jpg" alt="portfolio"
+                                        class="img-fluid w-100 rounded-3">
+                                </a>
+                            </div>
+                            <div class="col-xl-4 col-md-6 col-12">
+                                <!--image-->
+                                <a class="mb-4 d-block" href="#">
+                                    <img src="./assets/images/portfolio-6.jpg" alt="portfolio"
+                                        class="img-fluid w-100 rounded-3">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--production section-->
+        <!--experiences section-->
+        <section class="py-lg-18 py-md-10 py-8 bg-dark" id="experiences">
+            <div class="container">
+                <!--row-->
+                <div class="row">
+                    <div class="col-xl-12 col-md-12  col-lg-8 col-12">
+                        <div class="mb-lg-8 mb-5">
+                            <!--text-->
+                            <h2 class="mb-4"> My <span class="text-primary">Experiences</span></h2>
+                            <p class="mb-0">
+                                我有三年的游戏开发经验，主要负责使用Unity和C#进行游戏逻辑开发。在这期间，我参与了多款商业项目，包括角色扮演游戏、射击游戏和策略游戏。我对性能优化和图形渲染有深入的理解，熟练使用版本控制工具如Git进行团队协作，具备良好的问题解决和调试能力。同时，我也非常热爱游戏行业，注重团队协作，具有较强的学习能力和钻研精神。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!--col-->
+                    <div class="col-xl-4 col-md-6 col-lg-4 col-12">
+                        <!--card start-->
+                        <div class="card mb-4 border-0">
+                            <!--card body-->
+                            <div class="card-body p-5">
+                                <div class="mb-3">
+                                    <!--text-->
+                                    <h5 class="mb-3">June.2020 - February.2021</h5>
+                                    <h4 class="mb-2 text-primary">游戏研发工程师</h4>
+                                    <span>北京多泰拓源网络科技有限公司</span>
+                                </div>
+                                <p class="mb-0">游戏维护；SDK接入，打包发布到各个快游戏平台；APP构建，上传到苹果和安卓系统。
+                                    独立制作游戏，分别为方块浪起来，86上山了；与主程序联合制作董贼哪里走，动物军团。
+                                </p>
+                                <!--text-->
+                            </div>
+                        </div>
+                        <!--card end-->
+                    </div>
+                    <!--col-->
+                    <div class="col-xl-4 col-md-6 col-lg-4 col-12">
+                        <!--card start-->
+                        <div class="card mb-4  border-0">
+                            <!--card body-->
+                            <div class="card-body p-5">
+                                <div class="mb-3">
+                                    <!--text-->
+                                    <h5 class="mb-3">May.2022 - Augest.2022</h5>
+                                    <h4 class="mb-2 text-primary">引擎实习生</h4>
+                                    <span>北京展心展力科技有限公司（MetaApp）</span>
+                                </div>
+                                <p class="mb-0">游戏维护；SDK接入，打包发布到各个快游戏平台；APP构建，上传到苹果和安卓系统。
+                                    独立制作游戏，分别为方块浪起来，86上山了；与主程序联合制作董贼哪里走，动物军团。
+                                </p>
+                                <!--text-->
+                            </div>
+                        </div>
+                        <!--card end-->
+                    </div>
+                    <!--col-->
+                    <div class="col-xl-4 col-md-6  col-lg-4 col-12">
+                        <!--card-->
+                        <div class="card border-0 mb-4">
+                            <!--card-body-->
+                            <div class="card-body p-5">
+                                <div class="mb-3">
+                                    <!--text-->
+                                    <h5 class="mb-3">Augest.2022 - hitherto</h5>
+                                    <h4 class="mb-2 text-primary">前端开发工程师</h4>
+                                    <span>北京蓝亚盒子科技有限公司（LayaBox）</span>
+                                </div>
+                                <p class="mb-0">负责两款项目的开发与维护：UGC创作平台MOMOYO与PGC创作平台LayaVerse。
+                                    参与LayaMe引擎功能开发：画板功能模块，摄像机跟随模块，游戏结算模块，会议室同步模块。
+                                </p>
+                                <!--text-->
+                            </div>
+                        </div>
+                        <!--card end-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--experiences section-->
+        <!--contact section-->
+        <section class="py-lg-18 py-md-10 py-8" id="contact">
+            <div class="container">
+                <!--row-->
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2 col-md-12 col-lg-8 offset-lg-2 col-12">
+                        <div class="text-center mb-5 mb-lg-8">
+                            <!--text-->
+                            <h2 class="mb-4">Contact <span class="text-primary">Me</span></h2>
+                            <!--text-->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-md-6 col-12">
+                        <div>
+                            <div class="d-flex mb-3">
+                                <!--address-->
+                                <h5 class="">
+                                    <span class="fw-bold text-primary">Address:</span>
+                                </h5>
+                                <p class="mb-0 ms-3">北京市海淀区西北旺镇中关村壹号</p>
+
+                            </div>
+                            <div class="d-flex mb-3">
+                                <!--phone-->
+                                <h5 class="">
+                                    <span class="fw-bold text-primary">Phone:</span>
+                                </h5>
+                                <p class="mb-0 ms-3">+86 18574176255</p>
+
+                            </div>
+                            <div class="d-flex mb-3">
+                                <!--email-->
+                                <h5 class="">
+                                    <span class="fw-bold text-primary">Email:</span>
+                                </h5>
+                                <p class="mb-0 ms-3">2908273068@qq.com</p>
+                            </div>
+                            <div class="d-flex">
+                                <!--website-->
+                                <h5>
+                                    <span class="fw-bold text-primary">Blog:</span>
+                                </h5>
+                                <p class="'mb-0 ms-3">https://blog.csdn.net/gghhb12?type=blog</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 offset-xl-2 col-md-6 col-12">
+                        <div>
+                            <!--form-->
+                            <form class="">
+                                <!--row-->
+                                <div class="row">
+                                    <!--col-->
+                                    <div class="col-lg-8">
+                                        <div class="mb-3">
+                                            <!--label-->
+                                            <label for="exampleFormControlInput1"
+                                                class="form-label visually-hidden">Email
+                                                address</label>
+                                            <!--input-->
+                                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                                                placeholder="Name" required>
+                                        </div>
+                                    </div>
+                                    <!--col-->
+                                    <div class="col-lg-12">
+                                        <div class="mb-3">
+                                            <!--label-->
+                                            <label for="exampleFormControlTextarea1"
+                                                class="form-label visually-hidden">Example
+                                                textarea</label>
+                                            <!--textarea-->
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                                                placeholder="Message"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-primary" type="submit" onClick="leaveMessage()">Leave Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--contact section-->
+    </main>
+
+
+
+
+
+</body>
+
+</html>
