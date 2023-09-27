@@ -4378,12 +4378,12 @@ textarea.form-control.is-invalid {
 .cloud{
     position: relative;
     width: 320px;
-    top: -50px;
+    top: 10px;
     height: 100px;
-    background-color: #c5ced3;
+    background-color: #fff;
     border-radius: 100px;
-    z-index: 100;
-    filter: drop-shadow(0,0,35px #c5ced3);
+    z-index: -100;
+    filter: drop-shadow(0,0,35px #fff);
 }
 
 .cloud::before{
@@ -4394,8 +4394,8 @@ textarea.form-control.is-invalid {
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    background: #c5ced3;
-    box-shadow: 90px 0 0 30px #c5ced3;
+    background: #fff;
+    box-shadow: 90px 0 0 30px #fff;
 }
 
 .text{
@@ -4409,20 +4409,40 @@ textarea.form-control.is-invalid {
     0 0 15px #eab308,
     0 0 30px #eab308;
     transform-origin: bottom;
-    animation: animate 2s linear forwards;
+    animation: animation-cloud 2s linear forwards;
 }
 
-@keyframes animate
+@keyframes animation-cloud
 {
     0%{
         transform: translateY(0) scale(1);
     }
     70%{
-        transform: translateY(150px) scale(1);
+        transform: translateY(100px) scale(1);
     }
     100%{
-        transform: translateY(150px) scale(1);
+        transform: translateY(100px) scale(1);
     }
+}
+
+
+.my-animation-contact{
+    animation: animation-contact 1s linear forwards;
+}
+
+@keyframes animation-contact
+{
+    0%{
+        transform: scale(1);
+    }
+    80%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+      }
+
+
 }
 
 .btn {
