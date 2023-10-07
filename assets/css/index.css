@@ -4375,7 +4375,18 @@ textarea.form-control.is-invalid {
     z-index: 4
 }
 
-.cloud{
+.image-holder {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.image-holder img {
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+}
+
+
+.cloud {
     position: relative;
     width: 320px;
     top: 10px;
@@ -4383,10 +4394,10 @@ textarea.form-control.is-invalid {
     background-color: #fff;
     border-radius: 100px;
     z-index: -100;
-    filter: drop-shadow(0,0,35px #fff);
+    filter: drop-shadow(0, 0, 35px #fff);
 }
 
-.cloud::before{
+.cloud::before {
     content: '';
     position: absolute;
     top: -50px;
@@ -4398,49 +4409,51 @@ textarea.form-control.is-invalid {
     box-shadow: 90px 0 0 30px #fff;
 }
 
-.text{
+.text {
     position: absolute;
     top: 100px;
     height: 20px;
     line-height: 20px;
     text-transform: uppercase;
-    color:#eab308;
+    color: #eab308;
     text-shadow: 0 0 5px #eab308,
-    0 0 15px #eab308,
-    0 0 30px #eab308;
+        0 0 15px #eab308,
+        0 0 30px #eab308;
     transform-origin: bottom;
     animation: animation-cloud 2s linear forwards;
 }
 
-@keyframes animation-cloud
-{
-    0%{
+@keyframes animation-cloud {
+    0% {
         transform: translateY(0) scale(1);
     }
-    70%{
+
+    70% {
         transform: translateY(100px) scale(1);
     }
-    100%{
+
+    100% {
         transform: translateY(100px) scale(1);
     }
 }
 
 
-.my-animation-contact{
+.my-animation-contact {
     animation: animation-contact 1s linear forwards;
 }
 
-@keyframes animation-contact
-{
-    0%{
+@keyframes animation-contact {
+    0% {
         transform: scale(1);
     }
-    80%{
+
+    80% {
         transform: scale(1.2);
     }
-    100%{
+
+    100% {
         transform: scale(1);
-      }
+    }
 
 
 }

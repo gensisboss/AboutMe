@@ -77,13 +77,24 @@
                     <!--col-->
                     <div class="col-xl-4 offset-xl-3 col-md-5 offset-md-1 col-lg-5 offset-lg-0  col-12">
                         <!--image-->
-                        <div class="position-relative">
-                            <img src="./assets/images/img-1.jpg" alt="about"
-                                class="img-fluid  position-relative z-1 rounded-4 ms-lg-n5 ms-md-n3">
-                            <div class="position-absolute top-0 mt-1 ">
-                                <img src="./assets/images/square.svg" alt="square"
-                                    class="img-fluid w-100 d-none d-lg-block d-md-block">
-                            </div>
+                        <div class="position-relative image-holder">
+                            <img id="image-holder" src="./assets/images/img-1.jpg" alt="about"
+                                class="img-fluid position-relative z-1 rounded-4 ms-lg-n5 ms-md-n3">
+                            <script>
+                                const mouseOverContainer = document.getElementsByClassName("image-holder")[0];
+                                const element = document.getElementById("image-holder");
+
+                                mouseOverContainer.addEventListener('mousemove', (e) => {
+                                    window.requestAnimationFrame(function () {
+                                        transformElement(e.clientX, e.clientY,element);
+                                    });
+                                });
+                                mouseOverContainer.addEventListener('mouseleave', (e) => {
+                                    window.requestAnimationFrame(function () {
+                                        element.style.transform = "rotateX(0) rotateY(0)";
+                                    });
+                                });
+                            </script>
                         </div>
 
                     </div>
@@ -100,13 +111,13 @@
                 <div class="row d-flex align-items-center">
                     <div class="col-xl-4  col-md-6 col-lg-6 col-12">
                         <div class="p-3 mb-5 mb-md-0">
-                                <div class="cloud"></div>
-                                <script>
-                                    setInterval(() => {
-                                        rain();
-                                    }, 50);
-                                </script>
-                            </div>
+                            <div class="cloud"></div>
+                            <script>
+                                setInterval(() => {
+                                    rain();
+                                }, 50);
+                            </script>
+                        </div>
                     </div>
                     <!--col-->
                     <div class="col-xl-6 offset-xl-1  col-md-5 offset-md-1 col-lg-5 offset-lg-1 col-12">
@@ -222,7 +233,8 @@
                                     <h3 class="mb-3">算法</h3>
 
                                     <p class="mb-0">
-                                       LeetCode解题超过500道，熟练掌握常用数据结构和算法，具备较强的逻辑思考和代码实现能力。具备深度学习、机器学习理论知识，有一定的数学基础。解决问题能力强，讲究团队协作 </p>
+                                        LeetCode解题超过500道，熟练掌握常用数据结构和算法，具备较强的逻辑思考和代码实现能力。具备深度学习、机器学习理论知识，有一定的数学基础。解决问题能力强，讲究团队协作
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -434,7 +446,8 @@
                                 <h5>
                                     <span class="fw-bold text-primary">Blog:</span>
                                 </h5>
-                                <a href="https://blog.csdn.net/gghhb12?type=blog"  target="_blank" class="'mb-0 ms-3">https://blog.csdn.net/gghhb12?type=blog</a>
+                                <a href="https://blog.csdn.net/gghhb12?type=blog" target="_blank"
+                                    class="'mb-0 ms-3">https://blog.csdn.net/gghhb12?type=blog</a>
                             </div>
                         </div>
                     </div>

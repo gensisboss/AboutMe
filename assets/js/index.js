@@ -44,6 +44,17 @@ function rain() {
 }
 
 
+function transformElement(x, y,element) {
+   let multiple = 10;
+   let box = element.getBoundingClientRect();
+   let calcX = -(y - box.y - (box.height / 2)) / multiple;
+   let calcY = (x - box.x - (box.width / 2)) / multiple;
+
+   element.style.transform = "rotateX(" + calcX + "deg) "
+       + "rotateY(" + calcY + "deg)";
+}
+
+
 
 
 window.addEventListener('scroll', function () {
