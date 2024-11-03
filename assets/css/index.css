@@ -16648,6 +16648,12 @@ fieldset:disabled .btn {
         margin-bottom: 0 !important
     }
 
+    .model-container {
+        position: relative;
+        width: 50%;
+        height: 100px;
+    }
+
     .mb-md-1 {
         margin-bottom: .25rem !important
     }

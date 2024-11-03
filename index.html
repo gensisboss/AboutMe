@@ -9,6 +9,8 @@
         rel="stylesheet">
 
     <script src="./assets/js/index.js"></script>
+    <script src="./lib/three/three.js"></script>
+    <script src="./lib/three/OBJLoader.js"></script>
     <link rel="stylesheet" href="./assets/css/index.css">
 </head>
 
@@ -62,14 +64,14 @@
                     <div class="col-xl-5 col-md-6  col-lg-6 col-12">
                         <div class="mb-5 mb-md-0">
                             <!--text-->
-                            <span class=" text-primary">念念不忘，必有回响</span>
+                            <span class=" text-primary">低头干活，抬头看路</span>
                             <!--title-->
                             <h1 class="mt-4 mb-4 display-3 fw-semibold">龚港浩</h1>
                             <p class="mb-6 lead">东北石油大学-电子信息工程</p>
                             <p>了解计算机网络、操作系统，有良好的数据库和算法基础;</p>
-                            <p>熟悉unity3d Laya Cocos游戏制作;</p>
-                            <p>熟练运用 C++,C#,JS,TS,Html,Python, NodeJs编程;</p>
-                            <p class="mb-6">CSDN发表超过200篇博客。</p>
+                            <p>熟悉Unity3D Laya Cocos Egret游戏制作;</p>
+                            <p>运用 C++,C#,JS,TS,Html,Java,SQL编程;</p>
+                            <p class="mb-6">CSDN发表超过300篇博客; LeetCode解题超过1000道;</p>
                             <a href="#contact" class="btn btn-primary" onClick="setActive('contactBtn')">联系我</a>
                             <!--text-->
                         </div>
@@ -110,13 +112,10 @@
                 <!--row-->
                 <div class="row d-flex align-items-center">
                     <div class="col-xl-4  col-md-6 col-lg-6 col-12">
-                        <div class="p-3 mb-5 mb-md-0">
-                            <div class="cloud"></div>
+                        <div id="3dScene" class="p-3 mb-5 mb-md-0">
                             <script>
-                                setInterval(() => {
-                                    rain();
-                                }, 50);
-                            </script>
+                                model();
+                            </script>                            
                         </div>
                     </div>
                     <!--col-->
@@ -344,34 +343,12 @@
                             <div class="card-body p-5">
                                 <div class="mb-3">
                                     <!--text-->
-                                    <h5 class="mb-3">June.2020 - February.2021</h5>
+                                    <h5 class="mb-3">Jun.2020 - Feb.2021</h5>
                                     <h4 class="mb-2 text-primary">游戏研发工程师</h4>
                                     <span>北京多泰拓源网络科技有限公司</span>
                                 </div>
                                 <p class="mb-0">游戏维护；SDK接入，打包发布到各个快游戏平台；APP构建，上传到苹果和安卓系统。
                                     独立制作游戏，分别为方块浪起来，86上山了；与主程序联合制作董贼哪里走，动物军团。
-                                </p>
-                                <!--text-->
-                            </div>
-                        </div>
-                        <!--card end-->
-                    </div>
-                    <!--col-->
-                    <div class="col-xl-4 col-md-6 col-lg-4 col-12">
-                        <!--card start-->
-                        <div class="card mb-4  border-0">
-                            <!--card body-->
-                            <div class="card-body p-5">
-                                <div class="mb-3">
-                                    <!--text-->
-                                    <h5 class="mb-3">May.2022 - Augest.2022</h5>
-                                    <h4 class="mb-2 text-primary">引擎实习生</h4>
-                                    <span>北京展心展力科技有限公司（MetaApp）</span>
-                                </div>
-                                <p class="mb-0">利用公司引擎独立制作游戏，包括程序编写，场景搭建，以及推动项目上线和后期看数调整游戏等
-                                    一系列游戏发布流程;
-                                    参与MetaApp游戏引擎的研发;
-
                                 </p>
                                 <!--text-->
                             </div>
@@ -386,12 +363,33 @@
                             <div class="card-body p-5">
                                 <div class="mb-3">
                                     <!--text-->
-                                    <h5 class="mb-3">Augest.2022 - hitherto</h5>
+                                    <h5 class="mb-3">Jun.2022 - Feb.2024</h5>
                                     <h4 class="mb-2 text-primary">前端开发工程师</h4>
                                     <span>北京蓝亚盒子科技有限公司（LayaBox）</span>
                                 </div>
                                 <p class="mb-0">负责两款项目的开发与维护：UGC创作平台MOMOYO与PGC创作平台LayaVerse。
                                     参与LayaMe引擎功能开发：画板功能模块，摄像机跟随模块，游戏结算模块，会议室同步模块。
+                                </p>
+                                <!--text-->
+                            </div>
+                        </div>
+                        <!--card end-->
+                    </div>
+                     <!--col-->
+                     <div class="col-xl-4 col-md-6 col-lg-4 col-12">
+                        <!--card start-->
+                        <div class="card mb-4  border-0">
+                            <!--card body-->
+                            <div class="card-body p-5">
+                                <div class="mb-3">
+                                    <!--text-->
+                                    <h5 class="mb-3">Apr.2024 - hitherto</h5>
+                                    <h4 class="mb-2 text-primary">全栈工程师</h4>
+                                    <span>波克城市（BOKE）</span>
+                                </div>
+                                <p class="mb-0">捕鱼游戏王核心项目开发，包括日常活动开发，礼包开发
+                                    炮灵系统，挂机系统的开发。
+
                                 </p>
                                 <!--text-->
                             </div>
@@ -423,7 +421,7 @@
                                 <h5 class="">
                                     <span class="fw-bold text-primary">Address:</span>
                                 </h5>
-                                <p class="mb-0 ms-3">北京市大兴区西红门河马科技小镇</p>
+                                <p class="mb-0 ms-3">上海市普陀区</p>
 
                             </div>
                             <div class="d-flex mb-3">
@@ -500,3 +498,4 @@
 </body>
 
 </html>
+
